@@ -1,0 +1,30 @@
+{
+    "database": {
+        "influxDb": {
+            "host": "localhost",
+            "port": 8086,
+            "databaseName": "statusok",
+            "username": "",
+            "password": ""
+        }
+    },
+    "notifyWhen": {
+        "meanResponseCount": 10
+    },
+    "notifications": {
+        "slack": {
+            "channel": "#webstatus",
+            "username": "statusok",
+            "channelWebhookURL": "https://hooks.slack.com/services/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"
+        }
+    },
+    "requests": [{
+        "url": "https://moreorless.be",
+        "requestType": "GET",
+        "headers": {},
+        "params": {},
+        "checkEvery": 120,
+        "responseCode": 200,
+        "responseTime": 800
+    }]
+}

@@ -11,6 +11,7 @@ ADD . /go/src/github.com/sanathp/StatusOk
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
 RUN go get github.com/codegangsta/cli
+RUN go get github.com/influxdata/influxdb
 RUN go get github.com/influxdb/influxdb
 RUN go get github.com/mailgun/mailgun-go
 RUN go install github.com/sanathp/StatusOk
@@ -29,5 +30,5 @@ RUN service grafana-server start
 
 ENTRYPOINT /go/bin/StatusOk --config /go/src/github.com/sanathp/StatusOk/config.json
 
-# Document that the service listens 
+# Document that the service listens
 EXPOSE 80 8083 8086 7321 3000
